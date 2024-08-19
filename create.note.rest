@@ -1,0 +1,7 @@
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+    "content": "VS Code Rest Client is a pre...",
+    "important": true
+}
