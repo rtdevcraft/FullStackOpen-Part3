@@ -1,0 +1,25 @@
+# fly.toml app configuration file generated for fullstackopen-part3-autumn-glitter-4186 on 2024-08-19T13:27:39-06:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'fullstackopen-part3-autumn-glitter-4186'
+primary_region = 'den'
+
+[build]
+
+[env]
+  PORT = "3000"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
